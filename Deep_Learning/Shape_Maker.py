@@ -1,4 +1,4 @@
-from tensorflow.python.keras.utils import Sequence
+from tensorflow.keras.utils import Sequence
 import numpy as np
 from skimage.draw import rectangle, circle
 
