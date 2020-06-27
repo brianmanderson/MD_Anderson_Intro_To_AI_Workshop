@@ -1,0 +1,36 @@
+[submodule "Keras_Utils"]
+	path = Keras_Utils
+	url = https://github.com/brianmanderson/Keras_Utils.git
+[submodule "Callbacks"]
+	path = Callbacks
+	url = https://github.com/brianmanderson/Callbacks.git
+[submodule "Data_Generators"]
+	path = Data_Generators
+	url = https://github.com/brianmanderson/Data_Generators.git
+[submodule "Plot_And_Scroll_Images"]
+	path = Plot_And_Scroll_Images
+	url = https://github.com/brianmanderson/Plot_And_Scroll_Images.git
+[submodule "Models"]
+	path = Models
+	url = https://github.com/brianmanderson/Models.git
+[submodule "Cyclical_Learning_Rate"]
+	path = Cyclical_Learning_Rate
+	url = https://github.com/brianmanderson/Cyclical_Learning_Rate.git
+[submodule "Finding_Optimization_Parameters"]
+	path = Finding_Optimization_Parameters
+	url = https://github.com/brianmanderson/Finding_Optimization_Parameters.git
+[submodule "Fill_Missing_Segments"]
+	path = Fill_Missing_Segments
+	url = https://github.com/brianmanderson/Fill_Missing_Segments.git
+[submodule "Visualizing_Model"]
+	path = Visualizing_Model
+	url = https://github.com/brianmanderson/Visualizing_Model.git
+[submodule "Send_Email_To_Phone"]
+	path = Send_Email_To_Phone
+	url = https://github.com/brianmanderson/Send_Email_To_Phone.git
+[submodule "Make_Single_Images"]
+	path = Make_Single_Images
+	url = https://github.com/brianmanderson/Make_Single_Images
+[submodule "Dicom_RT_and_Images_to_Mask"]
+	path = Dicom_RT_and_Images_to_Mask
+	url = https://github.com/brianmanderson/Dicom_RT_and_Images_to_Mask.git

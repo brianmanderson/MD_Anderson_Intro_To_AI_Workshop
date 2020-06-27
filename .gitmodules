@@ -1,0 +1,6 @@
+[submodule "Workshop_Modules"]
+	path = Workshop_Modules
+	url = https://github.com/brianmanderson/Workshop_Modules.git
+[submodule "DeepLearning/Base_Deeplearning_Code"]
+	path = DeepLearning/Base_Deeplearning_Code
+	url = https://github.com/brianmanderson/Base_Deeplearning_Code.git
