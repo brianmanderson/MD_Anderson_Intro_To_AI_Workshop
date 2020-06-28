@@ -10,3 +10,6 @@
 [submodule "Pre_Processing/Make_Single_Images"]
 	path = Pre_Processing/Make_Single_Images
 	url = https://github.com/brianmanderson/Make_Single_Images.git
+[submodule "Deep_Learning/Easy_VGG16_UNet"]
+	path = Deep_Learning/Easy_VGG16_UNet
+	url = https://github.com/brianmanderson/Easy_VGG16_UNet.git
