@@ -6,9 +6,10 @@ import numpy as np
 
 
 class Separate_files(object):
-    def __init__(self, path):
-        self.path = path
-        separate_dictionary(separate_by_desc(path),path)
+    def __init__(self, input_path, out_path):
+        separate_dictionary(separate_by_desc(input_path),out_path)
+
+
 def separate_by_desc(path):
     files = [i for i in os.listdir(path) if i.find('Overall_mask') == 0]
     file_dictionary = {}
@@ -17,11 +18,12 @@ def separate_by_desc(path):
         desc = file.split('Overall_mask_')[1].split('_y')[0]
         total_desc = desc + iteration
         if total_desc not in file_dictionary:
-            file_dictionary[total_desc] = [file]
+            file_dictionary[total_desc] = [os.path.join(path, file)]
         else:
-            file_dictionary[total_desc].append(file)
-        file_dictionary[total_desc].append(file.replace('_y','_').replace('Overall_mask','Overall_Data'))
+            file_dictionary[total_desc].append(os.path.join(path, file))
+        file_dictionary[total_desc].append(os.path.join(path, file.replace('_y','_').replace('Overall_mask','Overall_Data')))
     return file_dictionary
+
 
 def separate_dictionary(file_dictionary, path=None):
     patient_image_keys = list(file_dictionary.keys())
@@ -34,17 +36,15 @@ def separate_dictionary(file_dictionary, path=None):
             os.makedirs(os.path.join(path,out))
     for xxx in range(split_train):
         for file in file_dictionary[patient_image_keys[xxx]]:
-            os.rename(os.path.join(path,file), os.path.join(path,'Test', file))
+            os.rename(file, os.path.join(path, 'Test', os.path.split(file)[-1]))
     for xxx in range(split_train, int(split_train * 2)):
         for file in file_dictionary[patient_image_keys[xxx]]:
-            os.rename(os.path.join(path,file), os.path.join(path,'Validation', file))
+            os.rename(os.path.join(path,file), os.path.join(path, 'Validation', os.path.split(file)[-1]))
     for xxx in range(int(split_train * 2), len(perm)):
         for file in file_dictionary[patient_image_keys[xxx]]:
-            os.rename(os.path.join(path,file), os.path.join(path,'Train', file))
-
-def main():
-    pass
+            os.rename(os.path.join(path,file), os.path.join(path, 'Train', os.path.split(file)[-1]))
 
 
 if __name__ == '__main__':
-    main()
+    pass
+
